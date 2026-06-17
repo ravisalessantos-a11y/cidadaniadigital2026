@@ -1,116 +1,60 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+const botaoDark = document.getElementById("darkModeBtn");
+
+botaoDark.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+function mostrarAlerta(){
+    alert(
+        "Deepfakes podem ser usados para golpes, manipulação política e desinformação."
+    );
 }
 
-body{
-    background:#f4f6f9;
-    color:#222;
-    transition:0.4s;
+function respostaCorreta(){
+    document.getElementById("resultadoQuiz").innerHTML =
+    "✅ Correto! Sempre verifique antes de compartilhar.";
 }
 
-header{
-    text-align:center;
-    padding:40px;
-    background:linear-gradient(135deg,#4f46e5,#06b6d4);
-    color:white;
+function respostaErrada(){
+    document.getElementById("resultadoQuiz").innerHTML =
+    "❌ Errado! Compartilhar sem verificar aumenta a desinformação.";
 }
 
-nav{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:15px;
-    background:#111827;
-}
+let contador1 = 0;
+let contador2 = 0;
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
+const animacao = setInterval(() => {
 
-.hero{
-    text-align:center;
-    padding:50px;
-}
-
-.card{
-    max-width:1000px;
-    margin:20px auto;
-    padding:25px;
-    border-radius:15px;
-    background:white;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:20px;
-}
-
-.stats div{
-    text-align:center;
-}
-
-button{
-    background:#4f46e5;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    margin-top:10px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-input{
-    padding:12px;
-    width:100%;
-    margin-bottom:10px;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111827;
-    color:white;
-    margin-top:30px;
-}
-
-.dark{
-    background:#121212;
-    color:white;
-}
-
-.dark .card{
-    background:#1f2937;
-}
-
-.dark input{
-    background:#374151;
-    color:white;
-}
-
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        align-items:center;
+    if(contador1 < 1000){
+        contador1 += 10;
+        document.getElementById("contador1").innerText = contador1;
     }
 
-    .stats{
-        flex-direction:column;
+    if(contador2 < 500){
+        contador2 += 5;
+        document.getElementById("contador2").innerText = contador2;
     }
 
-}
+    if(contador1 >= 1000 && contador2 >= 500){
+        clearInterval(animacao);
+    }
+
+},20);
+
+document
+.getElementById("formulario")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+
+    if(nome.trim() === ""){
+        alert("Digite seu nome.");
+        return;
+    }
+
+    document.getElementById("mensagem").innerHTML =
+    `Obrigado, ${nome}! Você assumiu o compromisso de combater a desinformação.`;
+
+});
