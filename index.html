@@ -1,41 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital | IA e Deepfakes</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cidadania Digital e IA</title>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">IA & Cidadania</div>
-        <button id="toggle-theme">Alternar Tema</button>
-    </nav>
+<header>
+    <h1>Cidadania Digital e Inteligência Artificial</h1>
+    <p>Deepfakes, Fake News e Segurança Online</p>
 
-    <header class="hero">
-        <h1>O Impacto da IA na Sociedade</h1>
-        <p>Aprenda a identificar Deepfakes e combater a desinformação.</p>
-    </header>
+    <button id="darkModeBtn">
+        🌙 Modo Escuro
+    </button>
+</header>
 
-    <main class="container">
-        <section class="card">
-            <h3>O que são Deepfakes?</h3>
-            <p>São conteúdos criados por IA que imitam vozes e rostos reais. Use o bom senso: se o vídeo parece estranho, desconfie!</p>
-        </section>
+<nav>
+    <a href="#deepfake">Deepfakes</a>
+    <a href="#fakeNews">Fake News</a>
+    <a href="#dicas">Dicas</a>
+    <a href="#quiz">Quiz</a>
+</nav>
 
-        <section class="card">
-            <h3>Verificador de Notícias</h3>
-            <input type="text" id="newsInput" placeholder="Digite uma manchete...">
-            <button onclick="checarNoticia()">Verificar</button>
-            <p id="feedback"></p>
-        </section>
-    </main>
+<main>
 
-    <footer>
-        <p>Desenvolvido para o projeto de Educação Digital 2026.</p>
-    </footer>
+<section class="hero">
+    <h2>Você consegue identificar uma notícia falsa?</h2>
+    <p>
+        A Inteligência Artificial trouxe avanços incríveis,
+        mas também aumentou os riscos de manipulação digital.
+    </p>
+</section>
 
-    <script src="js/script.js"></script>
+<section id="deepfake" class="card">
+    <h2>🎭 O que são Deepfakes?</h2>
+
+    <p>
+        Deepfakes são vídeos, imagens ou áudios criados por IA
+        para imitar pessoas reais de forma extremamente convincente.
+    </p>
+
+    <button onclick="mostrarAlerta()">
+        Ver Exemplo de Risco
+    </button>
+</section>
+
+<section id="fakeNews" class="card">
+    <h2>📰 Fake News Automatizadas</h2>
+
+    <p>
+        Sistemas de IA podem criar notícias falsas rapidamente,
+        espalhando desinformação em redes sociais.
+    </p>
+
+    <div class="stats">
+        <div>
+            <h3 id="contador1">0</h3>
+            <p>Usuários impactados</p>
+        </div>
+
+        <div>
+            <h3 id="contador2">0</h3>
+            <p>Notícias falsas compartilhadas</p>
+        </div>
+    </div>
+</section>
+
+<section id="dicas" class="card">
+    <h2>🛡️ Como se proteger?</h2>
+
+    <ul>
+        <li>Verifique a fonte da informação.</li>
+        <li>Pesquise em sites confiáveis.</li>
+        <li>Desconfie de conteúdos emocionais.</li>
+        <li>Observe erros visuais em vídeos.</li>
+        <li>Nunca compartilhe sem confirmar.</li>
+    </ul>
+</section>
+
+<section id="quiz" class="card">
+    <h2>🎯 Quiz de Cidadania Digital</h2>
+
+    <p>
+        Uma notícia recebida por WhatsApp sem fonte confiável deve:
+    </p>
+
+    <button onclick="respostaErrada()">
+        Compartilhar imediatamente
+    </button>
+
+    <button onclick="respostaCorreta()">
+        Ser verificada antes
+    </button>
+
+    <div id="resultadoQuiz"></div>
+</section>
+
+<section class="card">
+    <h2>📩 Compromisso Digital</h2>
+
+    <form id="formulario">
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome">
+
+        <button type="submit">
+            Assinar compromisso
+        </button>
+    </form>
+
+    <p id="mensagem"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Projeto Educacional - Educação Digital e IA 2026
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
