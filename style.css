@@ -1,0 +1,24 @@
+:root { 
+    --primary: #4f46e5; 
+    --secondary: #8b5cf6; 
+    --bg: #f1f5f9; 
+    --text: #0f172a; 
+}
+
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); margin: 0; transition: 0.3s; }
+
+.navbar { background: var(--primary); color: white; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+
+.hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; }
+
+.container { display: flex; flex-wrap: wrap; gap: 20px; padding: 40px; justify-content: center; }
+
+.card { background: white; padding: 25px; border-radius: 15px; width: 320px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+
+button { cursor: pointer; padding: 10px 20px; border: none; border-radius: 8px; background: var(--primary); color: white; font-weight: bold; }
+
+input { padding: 10px; border: 1px solid #ccc; border-radius: 8px; width: 80%; margin-bottom: 10px; }
+
+/* Dark Mode */
+body.dark-mode { background: #1e293b; color: #f1f5f9; }
+body.dark-mode .card { background: #334155; color: white; }
