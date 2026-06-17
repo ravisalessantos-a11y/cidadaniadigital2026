@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital | IA e Deepfakes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">IA & Cidadania</div>
+        <button id="toggle-theme">Alternar Tema</button>
+    </nav>
+
+    <header class="hero">
+        <h1>O Impacto da IA na Sociedade</h1>
+        <p>Aprenda a identificar Deepfakes e combater a desinformação.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h3>O que são Deepfakes?</h3>
+            <p>São conteúdos criados por IA que imitam vozes e rostos reais. Use o bom senso: se o vídeo parece estranho, desconfie!</p>
+        </section>
+
+        <section class="card">
+            <h3>Verificador de Notícias</h3>
+            <input type="text" id="newsInput" placeholder="Digite uma manchete...">
+            <button onclick="checarNoticia()">Verificar</button>
+            <p id="feedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o projeto de Educação Digital 2026.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
